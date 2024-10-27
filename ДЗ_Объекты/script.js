@@ -102,4 +102,81 @@
 // имя файла (подстрока после последнего символа "\" ) из
 // полного пути к файлу.
 
-const path = (pathName) => pathName.substr(/\w/)
+// const path = (pathName) => pathName.split('/').pop().includes('.') ? pathName.split('/').pop() : 'Путь указан к папке или к файлу без расширения'
+// console.log(path('/home/headon/Рабочий стол/Lad/Vest/style.css'))
+
+// 15. Создайте функцию endsWith(), который сравнивает
+// подстроку str1 с окончанием исходной строки str и определяет
+// заканчивается ли строка символами подстроки.
+
+// const endsWith = (str,str1) => str1 === str.slice(-str1.length)
+// console.log(endsWith('Javascript','pt'))
+
+// 16. Напишите функцию getSubstr(str, char, pos), которая
+// возвращает часть строки, расположенную после или до
+// указанного символа char в зависимости от параметра pos.
+
+// const getSubstr = (str, char, pos = '') => {
+//     if(pos.toLowerCase() === 'after') {
+//         return str.substr(str.indexOf(char))
+//     } else if(pos.toLowerCase() === 'before') {
+//         return str.substr(0 , str.indexOf(char))
+//     } else {
+//         return 'Укажите параметр - pos'
+//     }
+    
+// }
+// console.log(getSubstr('String','i','BEFore'))
+// console.log(getSubstr('String','i','AFTER'))
+
+// 17. Напишите функцию insert(str, substr, pos), которая вставляет
+// подстроку substr в указанную позицию pos строки str. По
+// умолчанию подстрока вставляется в начало строки.
+
+// const insert = (str,substr,pos = 0) => str.slice(0,pos) + substr + str.slice(pos)
+// console.log(insert('Javascript','200'))
+
+// 18. Напишите функцию limitStr(str, n, symb), которая обрезает
+// строку, если она длиннее указанного количества символов n.Усеченная строка должна заканчиваться троеточием «...»
+// (если не задан параметр symb) или заданным символом symb.
+
+// const limitStr = (str, n, symb = '...') => str.length > n ? str.slice(0,n) + symb : str
+// console.log(limitStr('potato is a vegetable',11)) 
+
+// 19. Напишите функцию count(str, stringsearch), которая
+// возвращает количество символов stringsearch в строке str.
+
+
+// const count = (str, stringSearch) => {
+//     const lettersObject = {};
+//     stringSearch.split('').forEach(element => {
+//         lettersObject[`${element}`] = 0;
+//     });
+//     for(let elem of str.split('')) {
+//         for(let letter in lettersObject) {
+//             if(elem === letter) {
+//                 lettersObject[`${letter}`] += 1;
+//             }
+//         }
+//     }
+//     return lettersObject;
+// }
+// console.log(count('potato and tomato','tam'))
+
+// 20. Напишите функцию strip(str), которая удаляет все лишние
+// пробелы из строки str.
+
+// const strip = (str) => str.trim().replace(/\s+/g, ' ')
+// console.log(strip('    My favorite       language      is a      Scratch    '))
+
+// 21. Напишите функцию cutString(str, n), которая удаляет лишние
+// слова из строки str, оставив в ней n слов.
+
+// const cutString = (str, n) => str.split(' ').slice(0,n).join(' ')
+// console.log(cutString('Hello world world world world world world',3))
+
+// 22. Напишите функцию findWord(word, str), которая проверяет,
+// существует ли в строке str слова word.
+
+// const findWord = (word, str) => str.includes(word)
+// console.log(findWord('like','Fred like play basketball'))
