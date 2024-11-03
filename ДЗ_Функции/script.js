@@ -102,5 +102,5 @@
 
 // 16. Напишите стрелочную функцию, которая будет возвращать true если строка является палиндромом и false в противном случае.
 
-const isPalindrom = (str) => str.split('').reverse().join('').toLowerCase().replaceAll(' ', '') === str.toLowerCase().replaceAll(' ', '') ? true : false
-console.log(isPalindrom('Я иду с мечем судия'))
+// const isPalindrom = (str) => str.split('').reverse().join('').toLowerCase().replaceAll(' ', '') === str.toLowerCase().replaceAll(' ', '') ? true : false
+// console.log(isPalindrom('Я иду с мечем судия'))
